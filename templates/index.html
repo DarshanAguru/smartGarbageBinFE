@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bins</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="{% static 'images/logo.webp' %}" alt="">
+                <span class="title">Smart Bins</span>
+            </div>
+            <div class="login-btn">
+                <a href="login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="background-image"></div>
+        <div class="description">
+            <p>Login to see your reward points...</p>
+        </div>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

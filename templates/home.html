@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bins</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <style>
+        .btn-redeem{
+        background: #95e835;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+    }   
+
+    .btn-redeem:hover{
+        border: 2px solid rgb(0, 100, 0);
+    }
+
+    </style>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="{% static 'images/logo.webp' %}" alt="">
+                <span class="title">Smart Bins</span>
+            </div>
+            <div class="login-btn">
+                <a href="javascript:void(0)" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="background-image"></div>
+        <div class="profile-details">
+            <h1>Profile</h1>
+            <div class="user-details">
+                <p><strong>User ID (Phone no.):</strong> <span>{{userID}}</span></p>
+                <p><strong>User Name:</strong> <span>{{name}}</span></p>
+                <p><strong>Total Points:</strong> <span>{{points}}</span></p>
+            </div>
+            <button class="btn-redeem" onclick="comingSoon()">Redeem Points!</button>
+        </div>
+    </section>
+
+    <script>
+    function logout() {
+        var confirmLogout = confirm("Are you sure you want to logout?");
+        if (confirmLogout) {
+            window.location.replace('/logout');
+        } 
+        
+    }
+
+    function comingSoon(){
+        alert("Redeem Points feature is coming soon with exciting ways to get your good deeds pay you...")
+    }
+    </script>
+</body>
+</html>
